@@ -1,0 +1,64 @@
+name: face_recognition_plugin
+description: A Flutter plugin for Face++ SDK integration with face detection and liveness detection capabilities.
+version: 1.0.0
+homepage: https://github.com/your-org/face_recognition_plugin
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# Flutter插件配置
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.fiberhome.face_recognition_plugin
+        pluginClass: FaceRecognitionPlugin
+        dartPluginClass: FaceRecognitionPlugin
+
+# 插件信息
+publish_to: 'none' # 如果要发布到pub.dev，移除此行
+
+# 作者和维护者信息
+author: Flutter Team <flutter@fiberhome.com>
+maintainer: Flutter Team <flutter@fiberhome.com>
+
+# 许可证
+license: MIT
+
+# 关键词
+topics:
+  - face-recognition
+  - face-detection
+  - liveness-detection
+  - biometric
+  - security
+  - faceplus
+
+# 截图和文档
+screenshots:
+  - description: 'Face recognition in action'
+    path: screenshots/face_recognition_demo.png
+
+# 平台支持
+platforms:
+  android:
+    minSdkVersion: 21
+    targetSdkVersion: 33
+  # ios: # 未来支持
+  #   minOSVersion: '11.0'
+
+# 依赖的原生库
+android:
+  dependencies:
+    # Face++ SDK dependencies will be included in the libs folder
